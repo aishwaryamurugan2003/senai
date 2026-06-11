@@ -1,0 +1,104 @@
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 26, 46, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+}
+
+.mobile-side-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  background-color: var(--color-primary-indigo);
+  z-index: 2001;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-off-white);
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.mobile-lab-name {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.mobile-nav-item a,
+.mobile-dropdown-btn {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-off-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+}
+
+.mobile-dropdown-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.mobile-dropdown-btn svg.rotated {
+  transform: rotate(180deg);
+}
+
+.mobile-submenu {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-left: 1px solid var(--color-light-lavender);
+  padding-left: 1rem;
+}
+
+.mobile-submenu a {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.mobile-footer {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 251, 0.2);
+}
+
+.mobile-contact {
+  margin-bottom: 1.5rem;
+}
+
+.mobile-contact a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.mobile-social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.close-btn {
+  color: var(--color-off-white);
+}

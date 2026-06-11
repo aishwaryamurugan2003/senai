@@ -1,0 +1,119 @@
+.publication-card {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: white;
+  border: 1px solid var(--color-light-lavender);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.publication-card:hover {
+  border-color: var(--color-primary-indigo);
+  box-shadow: var(--shadow-subtle);
+  transform: translateY(-2px);
+}
+
+.pub-year-badge {
+  background-color: var(--color-primary-indigo);
+  color: white;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.pub-title {
+  font-size: 1.25rem;
+  color: var(--color-dark-text);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.pub-authors {
+  font-size: 0.95rem;
+  color: #5b5f97;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.pub-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.pub-venue {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #666;
+}
+
+.pub-category-badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  background-color: #f0f0f5;
+  color: var(--color-primary-indigo);
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.pub-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.keyword-tag {
+  font-size: 0.8rem;
+  color: #888;
+  background: #f9f9fb;
+  padding: 0.1rem 0.6rem;
+  border-radius: 4px;
+}
+
+.pub-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.pub-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-light-lavender);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.pub-action-btn:hover {
+  background-color: var(--color-primary-indigo);
+  color: white;
+  border-color: var(--color-primary-indigo);
+}
+
+@media (max-width: 768px) {
+  .publication-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .pub-year-badge {
+    width: 60px;
+  }
+  
+  .pub-actions {
+    flex-direction: row;
+  }
+}

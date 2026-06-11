@@ -1,0 +1,60 @@
+@import './styles/variables.css';
+
+/* Additional global utilities */
+.playfair {
+  font-family: var(--font-heading);
+}
+
+.inter {
+  font-family: var(--font-body);
+}
+
+.text-indigo { color: var(--color-primary-indigo); }
+.text-amber { color: var(--color-accent-amber); }
+.text-coral { color: var(--color-coral-red); }
+
+.bg-indigo { background-color: var(--color-primary-indigo); }
+.bg-off-white { background-color: var(--color-off-white); }
+.bg-dark { background-color: var(--color-dark-text); }
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background-color: var(--color-primary-indigo);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #4a4e7a;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 2px solid var(--color-primary-indigo);
+  color: var(--color-primary-indigo);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary-indigo);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-accent {
+  background-color: var(--color-accent-amber);
+  color: var(--color-dark-text);
+}
+
+.btn-accent:hover {
+  background-color: #ffb31a;
+  transform: translateY(-2px);
+}
