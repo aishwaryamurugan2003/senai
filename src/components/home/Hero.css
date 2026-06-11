@@ -15,12 +15,11 @@
 
 .panorama-track {
   display: flex;
-  width: 300%; /* 100% per slide */
   height: 100%;
 }
 
 .panorama-slide {
-  width: 100%;
+  flex: 0 0 100%;
   height: 100%;
   position: relative;
 }
@@ -29,8 +28,25 @@
   position: absolute;
   inset: 0;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  transition: background-position 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.bg-ai-sustainability {
+  background-image: linear-gradient(rgba(26, 26, 46, 0.6), rgba(26, 26, 46, 0.8)), url('../../assets/ai_sustainability_bg.png');
+}
+
+.bg-systems-engineering {
+  background-image: linear-gradient(rgba(26, 26, 46, 0.6), rgba(26, 26, 46, 0.8)), url('../../assets/systems_engineering_bg.png');
+}
+
+.bg-data-science-nlp {
+  background-image: linear-gradient(rgba(26, 26, 46, 0.6), rgba(26, 26, 46, 0.8)), url('../../assets/data_science_nlp_bg.png');
+}
+
+.bg-default {
+  background-image: linear-gradient(rgba(26, 26, 46, 0.6), rgba(26, 26, 46, 0.8)), url('/panorama_bg.png');
 }
 
 /* ===== CONTENT OVERLAY ===== */
@@ -150,27 +166,17 @@
 }
 
 .stage-arrows {
-  display: flex;
-  gap: 1rem;
+  display: none;
 }
 
-.stage-arrow {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.stage-arrow:hover {
-  background: white;
-  color: var(--color-primary-indigo);
-  border-color: white;
+/* Full-section invisible click / touch zone */
+.slide-nav-zone {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  cursor: pointer;
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* ===== AESTHETIC OVERLAYS ===== */

@@ -1,92 +1,141 @@
+/* ── Member Card - Premium Redesign ── */
 .member-card {
   background: white;
-  border: 1px solid var(--color-light-lavender);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  height: 100%;
+  border: 1px solid rgba(184, 184, 209, 0.35);
+  border-radius: var(--border-radius-md);
+  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  transition: box-shadow 0.35s var(--ease-out-expo), border-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.member-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gradient-indigo);
+  transform: scaleX(0);
+  transition: transform 0.35s var(--ease-out-expo);
+  transform-origin: left;
 }
 
 .member-card:hover {
-  border-color: var(--color-primary-indigo);
-  box-shadow: var(--shadow-medium);
-  transform: translateY(-5px);
+  border-color: rgba(91, 95, 151, 0.3);
+  box-shadow: 0 16px 48px rgba(91, 95, 151, 0.14);
 }
 
+.member-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Avatar */
 .member-image-wrapper {
-  height: 250px;
-  width: 100%;
-  overflow: hidden;
-  background-color: var(--color-light-lavender);
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 0.75rem;
 }
 
 .member-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  transition: transform 0.5s ease;
-}
-
-.member-card:hover .member-image {
-  transform: scale(1.05);
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 4px 16px rgba(91, 95, 151, 0.2);
 }
 
 .member-image-placeholder {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
+  background: var(--gradient-indigo);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
   font-family: var(--font-heading);
-  color: var(--color-primary-indigo);
-  opacity: 0.4;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: white;
 }
 
-.member-details {
-  padding: 1.5rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+.member-glow-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              var(--gradient-indigo) border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
+.member-card:hover .member-glow-ring {
+  opacity: 1;
+}
+
+/* Text */
 .member-name {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: var(--color-dark-text);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.1rem;
 }
 
 .member-position {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: var(--color-primary-indigo);
   font-weight: 600;
-  margin-bottom: 0.8rem;
 }
 
-.member-area {
-  font-size: 0.85rem;
-  color: #666;
-  font-style: italic;
-  margin-bottom: 1.5rem;
-  flex: 1;
+.member-area-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 0.3rem 0.7rem;
+  border-radius: 50px;
+  background: rgba(91, 95, 151, 0.08);
+  color: var(--color-primary-deep);
+  margin: 0.35rem 0 0.75rem;
 }
 
+/* Contacts */
 .member-contacts {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 1rem;
-  border-top: 1px solid #f0f0f5;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: auto;
 }
 
 .member-email-link {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.85rem;
-  color: #4a4a6a;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: #888;
+  transition: color 0.2s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.member-email-link span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 160px;
 }
 
 .member-email-link:hover {
@@ -94,11 +143,23 @@
 }
 
 .member-profile-btn {
-  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--color-accent-amber);
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
+  letter-spacing: 0.8px;
+  color: var(--color-primary-indigo);
+  border: 1px solid rgba(91, 95, 151, 0.3);
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  transition: all 0.25s ease;
+}
+
+.member-profile-btn:hover {
+  background: var(--color-primary-indigo);
+  color: white;
+  border-color: var(--color-primary-indigo);
 }

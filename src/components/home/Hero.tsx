@@ -1,13 +1,23 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, useScroll, useTransform, useSpring } from 'framer-motion';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import { panoramaItems } from '../../data/panoramaItems';
+import aiSustainabilityBg from '../../assets/ai_sustainability_bg.png';
+import systemsEngineeringBg from '../../assets/systems_engineering_bg.png';
+import dataScienceNlpBg from '../../assets/data_science_nlp_bg.png';
 import './Hero.css';
 
 const Hero = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const bgImages: Record<string, string> = {
+    'ai-sustainability': aiSustainabilityBg,
+    'systems-engineering': systemsEngineeringBg,
+    'data-science-nlp': dataScienceNlpBg,
+  };
   const nextSlide = () => {
     setActiveIndex((prev) => (prev + 1) % panoramaItems.length);
   };
@@ -32,6 +42,27 @@ const Hero = () => {
     setTimeout(() => setIsAutoPlaying(true), 15000);
   };
 
+  const touchStartX = useRef<number>(0);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const delta = e.changedTouches[0].clientX - touchStartX.current;
+    if (Math.abs(delta) > 40) {
+      if (delta < 0) nextSlide();
+      else prevSlide();
+    }
+  };
+
+  const handleZoneClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    if (e.clientX >= rect.left + rect.width / 2) nextSlide();
+    else prevSlide();
+  };
+
+
   return (
     <section className="panorama-stage">
       {/* Background Panorama - Horizontal Panning */}
@@ -46,8 +77,7 @@ const Hero = () => {
               <div
                 className="panorama-bg"
                 style={{
-                  backgroundImage: `linear-gradient(rgba(26, 26, 46, 0.4), rgba(26, 26, 46, 0.6)), url('/panorama_bg.png')`,
-                  backgroundPosition: `${50 + (index * 20)}% 50%` // Slight parallax shift
+                  backgroundImage: `linear-gradient(rgba(26,26,46,0.6), rgba(26,26,46,0.8)), url(${bgImages[item.id] ?? ''})`,
                 }}
               />
             </div>
@@ -75,9 +105,9 @@ const Hero = () => {
               <p className="stage-description">{panoramaItems[activeIndex].description}</p>
 
               <div className="stage-actions">
-                <a href={panoramaItems[activeIndex].link} className="btn btn-primary" style={{ backgroundColor: panoramaItems[activeIndex].color, borderColor: panoramaItems[activeIndex].color }}>
+                <Link to={panoramaItems[activeIndex].link} className="btn btn-primary" style={{ backgroundColor: panoramaItems[activeIndex].color, borderColor: panoramaItems[activeIndex].color }}>
                   Explore Area <ArrowRight size={18} />
-                </a>
+                </Link>
               </div>
             </motion.div>
           </AnimatePresence>
@@ -113,21 +143,23 @@ const Hero = () => {
             ))}
           </div>
 
-          <div className="stage-arrows">
-            <button className="stage-arrow prev" onClick={prevSlide} aria-label="Previous Slide">
-              <ChevronLeft size={24} />
-            </button>
-            <button className="stage-arrow next" onClick={nextSlide} aria-label="Next Slide">
-              <ChevronRight size={24} />
-            </button>
-          </div>
         </div>
       </div>
+
+      {/* Click / touch navigation zones */}
+      <div
+        className="slide-nav-zone"
+        onClick={handleZoneClick}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        aria-hidden="true"
+      />
 
       {/* Aesthetic Overlays */}
       <div className="stage-vignette"></div>
       <div className="stage-grid-overlay"></div>
     </section>
+
   );
 };
 

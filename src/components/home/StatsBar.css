@@ -1,0 +1,108 @@
+.stats-bar {
+  position: relative;
+  background: var(--gradient-dark-section);
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+/* ── Ambient beam ── */
+.stats-beam {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse at center, rgba(91, 95, 151, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Subtle dot grid ── */
+.stats-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* ── Grid layout ── */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Individual stat ── */
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+}
+
+.stat-item:hover {
+  border-color: rgba(91, 95, 151, 0.4);
+  background: rgba(91, 95, 151, 0.08);
+  transform: translateY(-4px);
+}
+
+.stat-icon {
+  color: var(--color-accent-amber);
+  background: rgba(255, 193, 69, 0.1);
+  padding: 0.85rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 193, 69, 0.2);
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.stat-suffix {
+  color: var(--color-accent-amber);
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--color-light-lavender);
+}
+
+@media (max-width: 768px) {
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stat-number {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .stat-item {
+    padding: 1.5rem 1rem;
+  }
+}

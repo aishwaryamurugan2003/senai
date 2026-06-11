@@ -7,7 +7,7 @@ import { publications } from '../../data/publications';
 import { researchAreas } from '../../data/research';
 import { members } from '../../data/members';
 import { news } from '../../data/news';
-// import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.png';
 import './Header.css';
 
 const Header = () => {
@@ -91,7 +91,7 @@ const Header = () => {
             <Link to="/" className="logo-container">
               <div className="logo-placeholder">
                 <img
-                  src="/logo.png"
+                  src={logo}
                   alt="SENAI Lab"
                   className="logo-image"
                 />
@@ -116,7 +116,7 @@ const Header = () => {
             <Link to="/" className="logo-compact">
               <div className="logo-placeholder">
                 <img
-                  src="/logo.png"
+                  src={logo}
                   alt="SENAI Lab"
                   className="logo-image"
                 />

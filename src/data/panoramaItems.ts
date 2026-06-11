@@ -6,6 +6,7 @@ export interface PanoramaItem {
   color: string;
   link: string;
   tag: string;
+  bgImage: string;
 }
 
 export const panoramaItems: PanoramaItem[] = [
@@ -15,8 +16,9 @@ export const panoramaItems: PanoramaItem[] = [
     subtitle: 'Advanced Modeling · Renewable Energy · Carbon Tracking',
     description: 'Leveraging Artificial Intelligence and Machine Learning to accelerate the transition to a sustainable future through smart energy management and environmental modeling.',
     color: 'var(--color-primary-indigo)',
-    link: '/research',
-    tag: 'CORE FOCUS'
+    link: '/research#sustainability-ai',
+    tag: 'CORE FOCUS',
+    bgImage: '/ai_sustainability_bg.png'
   },
   {
     id: 'systems-engineering',
@@ -24,8 +26,9 @@ export const panoramaItems: PanoramaItem[] = [
     subtitle: 'Process Dynamics · Nonlinear Analysis · Control Systems',
     description: 'Developing sophisticated computational frameworks for the design, analysis, and optimization of complex engineering systems across multiple scales.',
     color: '#8B5CF6',
-    link: '/research',
-    tag: 'ADVANCED SYSTEMS'
+    link: '/research#systems-engineering',
+    tag: 'ADVANCED SYSTEMS',
+    bgImage: '/systems_engineering_bg.png'
   },
   {
     id: 'data-science-nlp',
@@ -33,7 +36,8 @@ export const panoramaItems: PanoramaItem[] = [
     subtitle: 'Deep Learning · NLP · Pattern Recognition',
     description: 'Exploring the frontiers of data-driven discovery through deep learning architectures and advanced language models for scientific and industrial applications.',
     color: 'var(--color-accent-amber)',
-    link: '/research',
-    tag: 'INTELLIGENCE & DATA'
+    link: '/research#nlp',
+    tag: 'INTELLIGENCE & DATA',
+    bgImage: '/data_science_nlp_bg.png'
   }
 ];

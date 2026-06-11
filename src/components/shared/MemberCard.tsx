@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, ArrowUpRight } from 'lucide-react';
+import { Mail, ArrowUpRight, Cpu } from 'lucide-react';
 import type { Member } from '../../data/members';
 import './MemberCard.css';
 
@@ -10,12 +10,13 @@ interface MemberCardProps {
 
 const MemberCard = ({ member, index }: MemberCardProps) => {
   return (
-    <motion.div 
+    <motion.div
       className="member-card"
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      transition={{ duration: 0.55, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ y: -6 }}
     >
       <div className="member-image-wrapper">
         {member.imageUrl ? (
@@ -23,19 +24,22 @@ const MemberCard = ({ member, index }: MemberCardProps) => {
         ) : (
           <div className="member-image-placeholder">{member.name.charAt(0)}</div>
         )}
+        <div className="member-glow-ring" />
       </div>
       <div className="member-details">
         <h3 className="member-name">{member.name}</h3>
         <p className="member-position">{member.position}</p>
-        <p className="member-area">{member.researchArea}</p>
-        
+        <span className="member-area-chip">
+          <Cpu size={12} /> {member.researchArea}
+        </span>
+
         <div className="member-contacts">
           <a href={`mailto:${member.email}`} className="member-email-link">
-            <Mail size={16} /> {member.email}
+            <Mail size={14} /> <span>{member.email}</span>
           </a>
           {member.profileLink && (
             <a href={member.profileLink} className="member-profile-btn">
-              Profile <ArrowUpRight size={14} />
+              Profile <ArrowUpRight size={13} />
             </a>
           )}
         </div>

@@ -1,23 +1,51 @@
 :root {
-  /* Colors */
+  /* ── Primary palette ── */
   --color-primary-indigo: #5b5f97;
+  --color-primary-deep: #3d4178;
   --color-light-lavender: #b8b8d1;
   --color-accent-amber: #ffc145;
+  --color-accent-amber-glow: rgba(255, 193, 69, 0.35);
   --color-coral-red: #ff6b6c;
   --color-off-white: #fffffb;
   --color-dark-text: #1a1a2e;
-  
-  /* Shared values */
+  --color-dark-bg: #12122a;
+  --color-dark-surface: #1e1e3a;
+
+  /* ── Gradients ── */
+  --gradient-indigo: linear-gradient(135deg, #5b5f97 0%, #3d4178 100%);
+  --gradient-amber: linear-gradient(135deg, #ffc145 0%, #ff9800 100%);
+  --gradient-text: linear-gradient(135deg, #5b5f97, #b8b8d1);
+  --gradient-dark-section: linear-gradient(180deg, #12122a 0%, #1a1a2e 100%);
+
+  /* ── Glassmorphism ── */
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-blur: blur(12px);
+
+  /* ── Shadows ── */
+  --shadow-subtle: 0 2px 12px rgba(91, 95, 151, 0.10);
+  --shadow-medium: 0 4px 24px rgba(91, 95, 151, 0.18);
+  --shadow-card: 0 8px 32px rgba(91, 95, 151, 0.12);
+  --shadow-card-hover: 0 20px 48px rgba(91, 95, 151, 0.22);
+  --shadow-glow-indigo: 0 0 24px rgba(91, 95, 151, 0.4);
+  --shadow-glow-amber: 0 0 20px rgba(255, 193, 69, 0.4);
+
+  /* ── Layout ── */
   --header-height-large: 120px;
   --header-height-small: 70px;
   --container-max-width: 1200px;
+  --border-radius-sm: 6px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+
+  /* ── Animation ── */
   --transition-speed: 0.3s;
-  --shadow-subtle: 0 2px 12px rgba(91, 95, 151, 0.10);
-  --shadow-medium: 0 4px 20px rgba(91, 95, 151, 0.15);
-  
-  /* Fonts */
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-in-out-smooth: cubic-bezier(0.45, 0, 0.55, 1);
+
+  /* ── Fonts ── */
   --font-heading: 'Playfair Display', serif;
-  --font-body: 'Inter', sans-serif;
+  --font-body: 'Outfit', 'Inter', sans-serif;
 }
 
 * {
@@ -63,14 +91,30 @@ button {
 }
 
 .section-padding {
-  padding: 5rem 0;
+  padding: 6rem 0;
+}
+
+/* ── Global Animation Keyframes ── */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(91, 95, 151, 0); }
+  50% { box-shadow: 0 0 20px 4px rgba(91, 95, 151, 0.3); }
 }
 
 @media (max-width: 768px) {
   .section-padding {
-    padding: 3rem 0;
+    padding: 4rem 0;
   }
   .container {
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
   }
 }

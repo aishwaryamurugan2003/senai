@@ -1,0 +1,45 @@
+/* ── Research Preview - Dark Section ── */
+.research-preview-section {
+  position: relative;
+  background: var(--gradient-dark-section);
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.research-preview-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+}
+
+/* Override card backgrounds for dark section */
+.research-preview-section .research-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.research-preview-section .research-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+.research-preview-section .card-title {
+  color: white;
+}
+
+.research-preview-section .card-description {
+  color: rgba(184, 184, 209, 0.9);
+}
+
+.research-preview-section .card-footer {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.research-preview-section .section-footer {
+  margin-top: 2.5rem;
+}
