@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { panoramaItems } from '../../data/panoramaItems';
 import aiSustainabilityBg from '../../assets/ai_sustainability_bg.png';
 import systemsEngineeringBg from '../../assets/systems_engineering_bg.png';
 import dataScienceNlpBg from '../../assets/data_science_nlp_bg.png';
+import TextScramble from '../shared/TextScramble';
+import Typewriter from '../shared/Typewriter';
+import MagneticButton from '../shared/MagneticButton';
 import './Hero.css';
 
 const Hero = () => {
@@ -65,10 +68,11 @@ const Hero = () => {
 
   return (
     <section className="panorama-stage">
-      {/* Background Panorama - Horizontal Panning */}
+      {/* Background Panorama - Horizontal Panning + Vertical Parallax */}
       <div className="panorama-viewer">
         <motion.div
           className="panorama-track"
+          style={{ y: useTransform(useScroll().scrollY, [0, 500], [0, 150]) }}
           animate={{ x: `-${activeIndex * 100}%` }}
           transition={{ type: 'spring', stiffness: 30, damping: 10, mass: 1 }}
         >
@@ -95,19 +99,25 @@ const Hero = () => {
               initial={{ opacity: 0, x: 50, scale: 0.95 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: -50, scale: 0.95 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as any }}
             >
               <div className="stage-tag" style={{ color: panoramaItems[activeIndex].color }}>
                 {panoramaItems[activeIndex].tag}
               </div>
-              <h1 className="stage-title">{panoramaItems[activeIndex].title}</h1>
+              <h1 className="stage-title">
+                <TextScramble key={`title-${activeIndex}`} text={panoramaItems[activeIndex].title} />
+              </h1>
               <div className="stage-subtitle">{panoramaItems[activeIndex].subtitle}</div>
-              <p className="stage-description">{panoramaItems[activeIndex].description}</p>
+              <p className="stage-description">
+                <Typewriter key={`desc-${activeIndex}`} text={panoramaItems[activeIndex].description} delay={500} speed={40} />
+              </p>
 
               <div className="stage-actions">
-                <Link to={panoramaItems[activeIndex].link} className="btn btn-primary" style={{ backgroundColor: panoramaItems[activeIndex].color, borderColor: panoramaItems[activeIndex].color }}>
-                  Explore Area <ArrowRight size={18} />
-                </Link>
+                <MagneticButton>
+                  <Link to={panoramaItems[activeIndex].link} className="btn btn-primary" style={{ backgroundColor: panoramaItems[activeIndex].color, borderColor: panoramaItems[activeIndex].color }}>
+                    Explore Area <ArrowRight size={18} />
+                  </Link>
+                </MagneticButton>
               </div>
             </motion.div>
           </AnimatePresence>

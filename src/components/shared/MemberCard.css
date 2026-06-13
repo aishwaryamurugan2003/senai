@@ -1,7 +1,7 @@
 /* ── Member Card - Premium Redesign ── */
 .member-card {
-  background: white;
-  border: 1px solid rgba(184, 184, 209, 0.35);
+  background: var(--color-dark-surface);
+  border: 1px solid var(--glass-border);
   border-radius: var(--border-radius-md);
   padding: 2rem 1.5rem;
   display: flex;
@@ -104,8 +104,8 @@
   letter-spacing: 0.8px;
   padding: 0.3rem 0.7rem;
   border-radius: 50px;
-  background: rgba(91, 95, 151, 0.08);
-  color: var(--color-primary-deep);
+  background: var(--glass-bg);
+  color: var(--color-primary-indigo);
   margin: 0.35rem 0 0.75rem;
 }
 

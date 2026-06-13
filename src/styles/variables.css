@@ -48,6 +48,19 @@
   --font-body: 'Outfit', 'Inter', sans-serif;
 }
 
+[data-theme='dark'] {
+  --color-off-white: #0f172a;
+  --color-dark-text: #f8fafc;
+  --color-dark-surface: #1e293b;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --shadow-subtle: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --color-primary-indigo: #818cf8;
+  --color-light-lavender: #94a3b8;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -17,37 +17,21 @@ const stats: Stat[] = [
   { icon: <CalendarDays size={28} />, value: 15, suffix: '+', label: 'Years Active' },
 ];
 
-const AnimatedCount: React.FC<{ target: number; duration?: number }> = ({ target, duration = 2000 }) => {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const started = useRef(false);
+import { useMotionValue, useSpring, useTransform, animate, useInView } from 'framer-motion';
+
+const AnimatedCount: React.FC<{ target: number }> = ({ target }) => {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+  const ref = useRef(null);
+  const inView = useInView(ref);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !started.current) {
-          started.current = true;
-          const steps = 60;
-          const increment = target / steps;
-          let current = 0;
-          const interval = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-              setCount(target);
-              clearInterval(interval);
-            } else {
-              setCount(Math.floor(current));
-            }
-          }, duration / steps);
-        }
-      },
-      { threshold: 0.5 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [target, duration]);
+    if (inView) {
+      animate(count, target, { duration: 2, ease: "easeOut" });
+    }
+  }, [inView, target, count]);
 
-  return <span ref={ref}>{count}</span>;
+  return <motion.span ref={ref}>{rounded}</motion.span>;
 };
 
 const StatsBar: React.FC = () => {
@@ -66,7 +50,7 @@ const StatsBar: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] as any }}
             >
               <div className="stat-icon">{stat.icon}</div>
               <div className="stat-number">

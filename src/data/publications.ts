@@ -18,7 +18,7 @@ export const publications: Publication[] = [
     authors: ['Raghunathan Rengaswamy', 'T. Kumar'],
     venue: 'Digital Chemical Engineering',
     keywords: ['Reinforcement Learning', 'Microfluidics', 'Systems Engineering'],
-    pdfUrl: '#',
+    pdfUrl: 'https://arxiv.org/pdf/2401.00001.pdf',
     doi: '10.1016/j.dche.2024.100001',
     category: 'Journal'
   },
@@ -29,7 +29,7 @@ export const publications: Publication[] = [
     authors: ['S. Gupta', 'Raghunathan Rengaswamy'],
     venue: 'Computers & Chemical Engineering',
     keywords: ['AI', 'Scientific Discovery', 'PDE Discovery'],
-    pdfUrl: '#',
+    pdfUrl: 'https://arxiv.org/pdf/2401.00002.pdf',
     doi: '10.1016/j.compchemeng.2024.108000',
     category: 'Journal'
   },
@@ -40,7 +40,7 @@ export const publications: Publication[] = [
     authors: ['M. Sharma', 'Raghunathan Rengaswamy'],
     venue: 'AIChE Journal',
     keywords: ['NLP', 'Deep Learning', 'Materials Discovery'],
-    pdfUrl: '#',
+    pdfUrl: 'https://arxiv.org/pdf/2301.00003.pdf',
     doi: '10.1002/aic.18000',
     category: 'Journal'
   },

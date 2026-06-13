@@ -33,12 +33,12 @@ const PublicationCard = ({ publication, index }: PublicationCardProps) => {
       </div>
       <div className="pub-actions">
         {publication.pdfUrl && (
-          <a href={publication.pdfUrl} className="pub-action-btn pdf" title="Download PDF">
+          <a href={publication.pdfUrl} target="_blank" rel="noopener noreferrer" className="pub-action-btn pdf" title="View PDF">
             <FileText size={18} /> <span>PDF</span>
           </a>
         )}
         {publication.doi && (
-          <a href={`https://doi.org/${publication.doi}`} className="pub-action-btn doi" title="View DOI">
+          <a href={`https://doi.org/${publication.doi}`} target="_blank" rel="noopener noreferrer" className="pub-action-btn doi" title="View DOI">
             <ExternalLink size={18} /> <span>DOI</span>
           </a>
         )}

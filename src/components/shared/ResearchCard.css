@@ -10,8 +10,8 @@
 
 .research-card {
   --card-accent: var(--color-primary-indigo);
-  background: white;
-  border: 1px solid rgba(184, 184, 209, 0.4);
+  background: var(--color-dark-surface);
+  border: 1px solid var(--glass-border);
   border-radius: var(--border-radius-md);
   overflow: hidden;
   height: 100%;
@@ -77,7 +77,7 @@
 
 .card-description {
   font-size: 0.9rem;
-  color: #5a5a7a;
+  color: var(--color-light-lavender);
   line-height: 1.65;
   margin-bottom: auto;
   padding-bottom: 1.25rem;

@@ -88,6 +88,8 @@
   line-height: 1.1;
   color: white;
   margin-bottom: 1.5rem;
+  white-space: pre-wrap; /* Allow wrapping but handle it naturally */
+  min-height: 2.2em; /* Reserve space for two lines */
 }
 
 .stage-subtitle {

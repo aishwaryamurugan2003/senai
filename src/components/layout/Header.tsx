@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, ChevronDown, Search, X } from 'lucide-react';
+import { Menu, ChevronDown, Search, X, Sun, Moon } from 'lucide-react';
 import MobileMenu from './MobileMenu';
 import { publications } from '../../data/publications';
 import { researchAreas } from '../../data/research';
@@ -16,8 +16,18 @@ const Header = () => {
   const [isMembersDropdownOpen, setIsMembersDropdownOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
   const location = useLocation();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+  };
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 80);
@@ -166,6 +176,9 @@ const Header = () => {
           </nav>
 
           <div className="header-actions">
+            <button className="theme-toggle-btn" onClick={toggleTheme} aria-label="Toggle theme">
+               {theme === 'light' ? <Moon size={19} /> : <Sun size={19} />}
+            </button>
             <button className="search-btn" onClick={() => setIsSearchOpen(true)} aria-label="Open search">
               <Search size={19} />
             </button>

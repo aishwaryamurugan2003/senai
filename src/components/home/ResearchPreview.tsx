@@ -2,26 +2,36 @@ import React from 'react';
 import SectionHeading from '../shared/SectionHeading';
 import ResearchCard from '../shared/ResearchCard';
 import { researchAreas } from '../../data/research';
+import WordReveal from '../shared/WordReveal';
+import TiltCard from '../shared/TiltCard';
+import AnimateIn from '../shared/AnimateIn';
 import './HomeSections.css';
 import './ResearchPreview.css';
 
 const ResearchPreview = () => {
   return (
     <section className="research-preview-section">
-      {/* Grid overlay */}
       <div className="research-preview-grid" />
       <div className="container">
         <SectionHeading
           kicker="What We Do"
           title="Research & Impact"
-          subtitle="We address complex global challenges through fundamental scientific exploration and transformative technology."
+          subtitle=""
           dark
         />
-        <div className="research-grid">
-          {researchAreas.slice(0, 6).map((area, index) => (
-            <ResearchCard key={area.id} area={area} index={index} />
-          ))}
-        </div>
+        <WordReveal 
+          text="We address complex global challenges through fundamental scientific exploration and transformative technology." 
+          className="text-xl mb-12 max-w-3xl text-gray-400"
+        />
+        <AnimateIn stagger direction="up">
+          <div className="research-grid">
+            {researchAreas.slice(0, 6).map((area, index) => (
+              <TiltCard key={area.id}>
+                <ResearchCard area={area} index={index} />
+              </TiltCard>
+            ))}
+          </div>
+        </AnimateIn>
         <div className="section-footer">
           <a href="/research" className="btn btn-accent">View All Research Areas</a>
         </div>

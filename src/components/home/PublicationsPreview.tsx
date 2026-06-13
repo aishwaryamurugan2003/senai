@@ -2,6 +2,7 @@ import React from 'react';
 import SectionHeading from '../shared/SectionHeading';
 import PublicationCard from '../shared/PublicationCard';
 import { publications } from '../../data/publications';
+import SpotlightCard from '../shared/SpotlightCard';
 import './HomeSections.css';
 
 const PublicationsPreview = () => {
@@ -15,7 +16,9 @@ const PublicationsPreview = () => {
         />
         <div className="publications-list">
           {publications.slice(0, 3).map((pub, index) => (
-            <PublicationCard key={pub.id} publication={pub} index={index} />
+            <SpotlightCard key={pub.id} spotlightColor="rgba(91, 95, 151, 0.1)">
+              <PublicationCard publication={pub} index={index} />
+            </SpotlightCard>
           ))}
         </div>
         <div className="section-footer">
