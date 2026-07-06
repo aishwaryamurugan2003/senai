@@ -27,8 +27,9 @@ const MemberCard = ({ member, index }: MemberCardProps) => {
         <div className="member-glow-ring" />
       </div>
       <div className="member-details">
-        <h3 className="member-name">{member.name}</h3>
-        <p className="member-position">{member.position}</p>
+<h3 className="member-name" style={{ color: "#fff" }}>
+  {member.name}
+</h3>        <p className="member-position">{member.position}</p>
         <span className="member-area-chip">
           <Cpu size={12} /> {member.researchArea}
         </span>

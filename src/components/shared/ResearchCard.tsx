@@ -27,8 +27,9 @@ const ResearchCard: React.FC<ResearchCardProps> = ({ area, index }) => {
         <span className="area-icon">{area.title.charAt(0)}</span>
       </div>
       <div className="card-content">
-        <h3 className="card-title">{area.title}</h3>
-        <p className="card-description">{area.description}</p>
+<h3 className="card-title" style={{ color: "#fff" }}>
+  {area.title}
+</h3>        <p className="card-description">{area.description}</p>
         <div className="card-footer">
           <span className="projects-count">{area.projects.length} Project{area.projects.length !== 1 ? 's' : ''}</span>
           <ArrowRight className="arrow-icon" size={18} />

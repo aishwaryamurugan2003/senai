@@ -21,8 +21,9 @@ const NewsCard = ({ item, index }: NewsCardProps) => {
         <span className="news-date"><Calendar size={14} /> {new Date(item.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
         <span className="news-category">{item.category}</span>
       </div>
-      <h3 className="news-title">{item.title}</h3>
-      <p className="news-summary">{item.summary}</p>
+<h3 className="news-title" style={{ color: "#fff" }}>
+  {item.title}
+</h3>      <p className="news-summary">{item.summary}</p>
       <a href={item.link || '#'} className="news-read-more">
         Read More <ArrowRight size={16} />
       </a>

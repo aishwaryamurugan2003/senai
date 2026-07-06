@@ -35,7 +35,7 @@ const Footer = () => {
           <h4 className="footer-heading">Contact Us</h4>
           <ul className="footer-contact">
             <li><MapPin size={18} /> Department of Chemical Engineering, IIT Madras, Chennai, India 600036</li>
-            <li><Mail size={18} /> raghunathanr@iitm.ac.in</li>
+            <li><Mail size={18} /> raghur@dsai.iitm.ac.in</li>
             <li><Phone size={18} /> +91 44 2257 4173</li>
           </ul>
         </div>

@@ -59,7 +59,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 style={{ fontSize: '1.1rem', marginBottom: '0.3rem' }}>Email</h4>
-                  <p style={{ color: '#666' }}>raghunathanr@iitm.ac.in</p>
+                  <p style={{ color: '#666' }}>raghur@dsai.iitm.ac.in</p>
                   <p style={{ color: '#666' }}>senai-lab@iitm.ac.in</p>
                 </div>
               </div>
