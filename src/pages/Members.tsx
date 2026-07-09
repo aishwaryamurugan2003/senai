@@ -10,34 +10,34 @@ const Members = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const initialCategory = queryParams.get('category') as Member['category'] || 'Faculty';
-  
+
   const [activeTab, setActiveTab] = useState<Member['category']>(
-    ['Faculty', 'Current Students', 'Alumni'].includes(initialCategory) ? initialCategory : 'Faculty'
+    ['Faculty', 'Our Team', 'Alumni'].includes(initialCategory) ? initialCategory : 'Faculty'
   );
 
   useEffect(() => {
     const category = queryParams.get('category') as Member['category'];
-    if (category && ['Faculty', 'Current Students', 'Alumni'].includes(category)) {
+    if (category && ['Faculty', 'Our Team', 'Alumni'].includes(category)) {
       setActiveTab(category);
     }
   }, [location]);
 
-  const tabs: Member['category'][] = ['Faculty', 'Current Students', 'Alumni'];
+  const tabs: Member['category'][] = ['Faculty', 'Our Team', 'Alumni'];
 
   const filteredMembers = members.filter(m => m.category === activeTab);
 
   return (
     <div className="members-page" style={{ paddingTop: '160px' }}>
       <div className="container">
-        <SectionHeading 
-          title="Team Members" 
+        <SectionHeading
+          title="Team Members"
           subtitle="Our diverse team of professors, researchers, and students collaborating to redefine computational boundaries."
         />
 
-        <div className="tabs-container" style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          gap: '1rem', 
+        <div className="tabs-container" style={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '1rem',
           marginBottom: '4rem',
           borderBottom: '1px solid var(--color-light-lavender)',
           paddingBottom: '1rem'
@@ -57,7 +57,7 @@ const Members = () => {
             >
               {tab}
               {activeTab === tab && (
-                <motion.div 
+                <motion.div
                   layoutId="activeTab"
                   style={{
                     position: 'absolute',
@@ -73,13 +73,13 @@ const Members = () => {
           ))}
         </div>
 
-        <motion.div 
+        <motion.div
           layout
-          style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', 
-            gap: '2.5rem', 
-            marginBottom: '5rem' 
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+            gap: '2.5rem',
+            marginBottom: '5rem'
           }}
         >
           <AnimatePresence mode="popLayout">
