@@ -12,6 +12,429 @@ export interface Publication {
 
 export const publications: Publication[] = [
   {
+    id: 'cv-pub-1784024456260-0',
+    year: 2025,
+    title: "Droplet sorting computer: Design, optimization and device dynamics",
+    authors: ["M Shahab", "R Rengaswamy"],
+    venue: "Chemical Engineering Science 311, 121507, 2025.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-1',
+    year: 2023,
+    title: "Design of spinning disk atomization equipment for synthesis of drug-loaded microparticles",
+    authors: ["C Sreejith", "K Jayaseelan", "S Thomas", "R Rengaswamy", "MG Basavaraj"],
+    venue: "Review of Scientific Instruments 94 (10), 2023",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-2',
+    year: 2023,
+    title: "Perspective on Radiolytic Charging for Redox Flow Battery Electrolytes Using the Nuclear Decay Energy of Spent Nuclear Fuel/Radionuclides",
+    authors: ["S Patil", "DE Eapen", "R Suresh", "NU Kane", "R Rengaswamy"],
+    venue: "ACS omega 7 (45), 40775-40781, 2023",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-3',
+    year: 2019,
+    title: "Hierarchical multi-label segmentation for system identification using historical data",
+    authors: ["S. Manikandan and Raghunathan Rengaswamy"],
+    venue: "Industrial & Engineering Chemistry Research, 58(26), pp 11303-11315, 2019.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-4',
+    year: 2017,
+    title: "Rapid impedance measurement of energy systems using chirp signals",
+    authors: ["Resmi Suresh M. P. and Raghunathan Rengaswamy"],
+    venue: "Computers and Chemical Engineering, 106, pp 421-436, 2017.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-5',
+    year: 2017,
+    title: "An averaged model for probabilistic coalescence avalanches in 2D emulsions: insights into uncertainty propagation",
+    authors: ["Danny M. Raj and R. Rengaswamy"],
+    venue: "Physical Review E., 95(3), pp 032608, 2017.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-6',
+    year: 2017,
+    title: "An Improved Scaling Procedure for Analysis and Simplification of Process Models",
+    authors: ["Sudhakar Munusamy", "Parham Mobed", "Debangsu Bhattacharyya"],
+    venue: "Chemical Engineering Research & Design, 120, pp 410-422, 2017.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-7',
+    year: 2017,
+    title: "State and Parameter Estimation in Distributed Constrained Systems. 1. Extended Kalman Filtering of a Special Class of DAE Systems",
+    authors: ["Parham Mobed", "Sudhakar Munusamy", "Debangsu Bhattacharyya and Raghunathan Rengaswamy"],
+    venue: "Industrial & Engineering Chemistry Research, 56(1), pp 206-215, 2017.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-8',
+    year: 2017,
+    title: "On the detection of valve nonlinearities in otherwise linear closed-loop systems",
+    authors: ["Tim Spinner", "Babji Srinivasan", "and Raghunathan Rengaswamy"],
+    venue: "IEEE Transactions on Automatic Control, 62(2), pp 955-60, 2017.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-9',
+    year: 2016,
+    title: "Multivariate Control Loop Performance Assessment based on Scaling Exponent and Mahalanobis Distance",
+    authors: ["Laya Das", "Babji Srinivasan and Raghunathan Rengaswamy"],
+    venue: "IEEE Control Systems Technology, 24(3), pp 1067-1074, 2016.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-10',
+    year: 2016,
+    title: "A Dynamic Model of a Slagging Entrained-Flow Gasifier Including Models of Slag Transport, Deposition, and Slag Layer",
+    authors: ["Pratik Pednekar", "Debangsu Bhattacharrya", "Job S Kasule", "Richard Turton and Raghunathan Rengaswamy"],
+    venue: "Industrial & Engineering Chemistry Research, 55(1), pp 279-292, 2016.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-11',
+    year: 2015,
+    title: "Investigating arrangement of composite drops in 2D micro-channels using multi-agent simulations: a design perspective",
+    authors: ["Danny M. Raj and R. Rengaswamy"],
+    venue: "I & EC Research, 54(43), pp 10835-10842, 2015.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-12',
+    year: 2015,
+    title: "Electrical Circuit Analysis of CO Poisoning in High Temperature PEM Fuel Cells for Rapid Fault Diagnostics and Mitigation",
+    authors: ["Chris deBeer", "Paul Barendse", "Prag Pillay", "Brian Bullecks and Raghunathan Rengaswamy"],
+    venue: "IEEE Transactions on Industry Applications, 51(1), pp 619-630, 2015.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-13',
+    year: 2014,
+    title: "Origin of periodic and chaotic dynamics of droplet spacing in microfluidic devices",
+    authors: ["J. Maddala", "S. A. Vanapalli and R. Rengaswamy"],
+    venue: "Physical Review E., 89(2), pp 023015-1-5, 2014.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-14',
+    year: 2054,
+    title: "Receding-horizon Nonlinear Kalman (RNK) Filter for Nonlinear State Estimation",
+    authors: ["R. Rengaswamy", "S. Narasimhan and K. Vidyashankar"],
+    venue: "IEEE Transactions on Automatic Control, 58(8), pp 2054-2059, 2013.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-15',
+    year: 2013,
+    title: "Drop Digital Signal Generation in Microfluidic Networks Using Model Predictive Control",
+    authors: ["J. Maddala and R. Rengaswamy"],
+    venue: "Journal of Process Control, 23(2), pp 132-139, 2013.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-16',
+    year: 2012,
+    title: "Design of a model-based feedback controller for active sorting and synchronization of droplets in microfluidic loops",
+    authors: ["J. Maddala", "B. Srinivasan", "S. A. Vanapalli and R. Rengaswamy"],
+    venue: "AIChE, 58(7), pp 2120-2130, 2012.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-17',
+    year: 2012,
+    title: "Evaluation of Prediction Error Based Fuzzy Model Clustering (FMC) Approaches for Multiple Model Learning (MML)",
+    authors: ["K. Vidyashankar and R. Rengaswamy"],
+    venue: "International Journal of Advances in Engineering Sciences and Applied Mathematics, 4(1-2), pp 10-21, 2012.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-18',
+    year: 2011,
+    title: "Multivariable Optimization Studies of Cathode Catalyst Layer of a PEM Fuel Cell",
+    authors: ["M. Srinivasarao", "D. Bhattacharyya", "R. Rengaswamy and S. Narasimhan"],
+    venue: "Chemical Engineering Research and Design, 89, pp 10-22, 2011.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-19',
+    year: 2011,
+    title: "Application of Empirical Mode Decomposition in the Field of Polymer Physics",
+    authors: ["S. K. Subramanian", "B. Srinivasan", "J. Zhao", "R. Rengaswamy and G. B. Mckenna"],
+    venue: "Journal of Polymer Science Part B. Polymer Physics, 49, pp 277-290, 2011.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-20',
+    year: 2011,
+    title: "Kalman-based strategies for fault detection and identification (FDI): Extension and critical evaluation of a buffer tank system",
+    authors: ["K. Villez", "B. Srinivasan", "R. Rengaswamy", "S. Narasimhan and V. Venkatasubramanian"],
+    venue: "Computers and Chemical Engineering, 35, pp 806-816, 2011.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-21',
+    year: 2010,
+    title: "Unconstrained Nonlinear Predictive Control Formulation Based on a Class of Wiener Models: Development of a Closed Form Solution",
+    authors: ["S. Deshpande", "S. C. Patwardhan", "R. N. Methekar and R. Rengaswamy"],
+    venue: "Industrial and Engineering Chemistry Research, 49(1), pp 148-165, 2010.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-22',
+    year: 2010,
+    title: "Introducing DAE Models in Graduate and Undergraduate Chemical Engineering Curriculum",
+    authors: ["R. K. Mandela", "L. N. Sridhar and R. Rengaswamy"],
+    venue: "Chemical Engineering Education, 44(1), pp 73-80, 2010.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-23',
+    year: 2010,
+    title: "Control of PEMFC Using Data Driven State Space Models",
+    authors: ["R. N. Methekar", "S. C. Patwardhan", "R. Rengaswamy", "R. D. Gudi and V. Prasad"],
+    venue: "Chemical Engineering Research and Design, 88(7), pp 861-874, 2010.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-24',
+    year: 2010,
+    title: "Cathode parametric study and the role of liquid saturation on PEM fuel cell performance – A numerical approach",
+    authors: ["M. Srinivasarao", "D. Bhattacharyya", "R. Rengaswamy and S. Narasimhan"],
+    venue: "Journal of Power Sources, 195, pp 6782-6794, 2010.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-25',
+    year: 2010,
+    title: "System identification and nonlinear model predictive control of a tubular solid oxide fuel cell",
+    authors: ["D. Bhattacharyya and R. Rengaswamy"],
+    venue: "Industrial & Engineering Chemistry Research, 49(10), pp 4800-4808, 2010.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-26',
+    year: 2010,
+    title: "Optimization of a tubular Solid Oxide Fuel Cell: Development of the optimization-oriented model and dimensional optimization",
+    authors: ["D. Bhattacharyya and R. Rengaswamy"],
+    venue: "Computers and Chemical Engineering, 34, pp 1789-1802, 2010.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-27',
+    year: 2009,
+    title: "A Detailed Dynamic Model for a Tubular Solid Oxide Fuel Cell (TSOFC)",
+    authors: ["Debangsu Bhattacharya and Raghunathan Rengaswamy"],
+    venue: "Chemical Engineering Science, 64(9), pp 2158-2172, 2009.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-28',
+    year: 2009,
+    title: "Transport, Sensitivity and Dimensional Optimization studies of a tubular solid oxide fuel cell (SOFC)",
+    authors: ["Debangsu Bhattacharya and Raghunathan Rengaswamy"],
+    venue: "Journal of Power Sources, 190(2), pp 499-510, 2009.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-29',
+    year: 2008,
+    title: "Approaches for Efficient Stiction Compensation Approaches in Process Control Valves",
+    authors: ["Ranganathan Srinivasan and Raghunathan Rengaswamy"],
+    venue: "Computers and Chemical Engineering, 32(1-2), 218-229, 2008.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-30',
+    year: 2007,
+    title: "Quantification of Performance of Sensor Networks for Fault Diagnosis in Chemical Processes",
+    authors: ["Sridharakumar Narasimhan and Raghunathan Rengaswamy"],
+    venue: "AIChE Journal, 53(4), pp 902-917, 2007.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-31',
+    year: 2007,
+    title: "Isothermal Models for Tubular Anode-supported Solid Oxide Fuel Cell",
+    authors: ["D. Bhattacharya", "R. Rengaswamy and C. Finnerty"],
+    venue: "Chemical Engineering Science, 62(16), pp 4250-4267, 2007.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-32',
+    year: 2006,
+    title: "A Signed Directed Graph-based Systematic Framework for Malfunction Diagnosis inside Control Loops",
+    authors: ["M. R. Maurya", "R. Rengaswamy and V. Venkatasubramanian"],
+    venue: "Chemical Engineering Science, 61(6), pp1790-1810, 2006.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-33',
+    year: 2006,
+    title: "The Isothermal, Isobaric Reactive Flash Problem",
+    authors: ["Gerardo Ruiz", "Lakshmi N", "Sridhar and Raghunathan Rengaswamy"],
+    venue: "Industrial and Engineering Chemistry Research, 45(19), pp 6548-6554, 2006.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-34',
+    year: 2006,
+    title: "Detailed Dynamic Model for PEMFC Based on Flooded Spherical Agglomerate Characterization of the Reaction Layer",
+    authors: ["Madhusudana Rao and Raghunathan Rengaswamy"],
+    venue: "Journal of Power Sources, 158, pp110-123, 2006.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-35',
+    year: 2005,
+    title: "Step Response Analysis of Phosphoric Acid Fuel Cell (PAFC) Cathode Through a Simplified Transient Model",
+    authors: ["Suman Roy Choudhury", "J. Rengarajan", "M. B. Deshmukh and R. Rengaswamy"],
+    venue: "Journal of Power Sources, 140, 274-279, 2005.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-36',
+    year: 2005,
+    title: "Recursive Estimation Techniques in Constrained Nonlinear Dynamical Systems",
+    authors: ["Vachhani", "P.", "G. Vikrant", "S. Narasimhan and R. Rengaswamy"],
+    venue: "AIChE,  51(3), 946-959, 2005.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-37',
+    year: 2005,
+    title: "Fault Diagnosis by Qualitative Trend Analysis of Principal Components",
+    authors: ["M. R. Maurya", "R. Rengaswamy and V. Venkatasubramanian"],
+    venue: "Transactions I ChemE, 83 (A9), 1122-1132, 2005.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-38',
+    year: 2004,
+    title: "Industrial Experience with Object-Oriented Modeling: FCC Case Study",
+    authors: ["Madhusudana Rao", "R. Rengaswamy", "A. K. Suresh and K. S. Balaraman"],
+    venue: "Transactions of IchemE, 82(A4), pp 527-552, 2004.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-39',
+    year: 2003,
+    title: "Review of Process Fault Detection and Diagnosis - Part I: Quantitative Model-Based Methods",
+    authors: ["V. Venkatasubramanian", "R. Rengaswamy", "Kewen Yin and S. N.Kavuri"],
+    venue: "Computers and Chemical Engineering, 27(3), pp 239-311, 2003.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-40',
+    year: 2003,
+    title: "Review of Process Fault Detection and Diagnosis - Part II: Qualitative Models and Search Strategies",
+    authors: ["V. Venkatasubramanian", "R. Rengaswamy and S. N. Kavuri"],
+    venue: "Computers and Chemical Engineering, 27(3), pp 313-326, 2003.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-41',
+    year: 2003,
+    title: "Review of Process Fault Detection and Diagnosis - Part III: Process History Based Methods",
+    authors: ["V.  Venkatasubramanian", "R. Rengaswamy", "S. N. Kavuri and Kewen Yin"],
+    venue: "Computers and Chemical Engineering, 27(3), pp 327-346, 2003.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-42',
+    year: 2002,
+    title: "A Two-dimensional Steady-State Model for Phosphoric Acid Fuel Cells",
+    authors: ["Suman Roy Choudhury", "M. B. Deshmukh and R. Rengaswamy"],
+    venue: "Journal of Power Sources, 112, 137-152, 2002.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-43',
+    year: 2001,
+    title: "A Framework for Integrating Diagnostic Knowledge with Nonlinear Optimization for Parameter Estimation and Data Reconciliation in Dynamic Systems",
+    authors: ["Pramod Vachhani", "R. Rengaswamy and V. Venkatasubramanian"],
+    venue: "Chemical Engineering Science, 56(6), pp 2133-2148, 2001.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-44',
+    year: 2000,
+    title: "Design of Sensor Network based on the SDG of the process for Efficient Fault Diagnosis",
+    authors: ["Mani Bhushan and R. Rengaswamy"],
+    venue: "I & EC Research, 39(4), pp 999-1019, 2000.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-45',
+    year: 2000,
+    title: "Multivariable Gain-Scheduled Fuzzy Logic Control of a Fluidized Catalytic Cracker Unit",
+    authors: ["Pramit Sarma and R. Rengaswamy"],
+    venue: "Computers and Chemical Engineering, 24(2-7), pp 1083-1089, 2000.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
+    id: 'cv-pub-1784024456260-46',
+    year: 1999,
+    title: "Use of Inverse Response Sequence (IRS) for Identification in Chemical Process Systems",
+    authors: ["R. Srinivasan and R. Rengaswamy"],
+    venue: "I & EC Research, 38(9), pp 3420-3429, 1999.",
+    keywords: [],
+    category: "Journal"
+  },
+  {
     id: 'pub1',
     year: 2003,
     title: 'A review of process fault detection and diagnosis: Part I: Quantitative model-based methods',

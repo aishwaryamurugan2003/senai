@@ -8,6 +8,7 @@ import Publications from './pages/Publications';
 import News from './pages/News';
 import Members from './pages/Members';
 import Contact from './pages/Contact';
+import Director from './pages/Director';
 
 import { AnimatePresence, motion } from 'framer-motion';
 import ScrollProgress from './components/shared/ScrollProgress';
@@ -34,6 +35,7 @@ const AnimatedRoutes = () => {
         <Route path="/publications" element={<PageTransition><Publications /></PageTransition>} />
         <Route path="/news" element={<PageTransition><News /></PageTransition>} />
         <Route path="/members" element={<PageTransition><Members /></PageTransition>} />
+        <Route path="/director" element={<PageTransition><Director /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
       </Routes>
     </AnimatePresence>

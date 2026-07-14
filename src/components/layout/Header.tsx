@@ -58,6 +58,7 @@ const Header = () => {
       label: 'Members',
       hasDropdown: true,
       subLinks: [
+        { path: '/director', label: 'Principal Investigator' },
         { path: '/members?category=Faculty', label: 'Faculty' },
         { path: '/members?category=Students', label: 'Current Students' },
         { path: '/members?category=Alumni', label: 'Alumni' },
@@ -79,7 +80,7 @@ const Header = () => {
     ...members
       .filter(m => m.name.toLowerCase().includes(searchQuery.toLowerCase()) || m.researchArea.toLowerCase().includes(searchQuery.toLowerCase()))
       .slice(0, 2)
-      .map(m => ({ label: m.name, sub: `Member · ${m.position}`, path: '/members' })),
+      .map(m => ({ label: m.name, sub: `Member · ${m.position}`, path: m.profileLink && m.profileLink.startsWith('/') ? m.profileLink : '/members' })),
     ...news
       .filter(n => n.title.toLowerCase().includes(searchQuery.toLowerCase()))
       .slice(0, 2)

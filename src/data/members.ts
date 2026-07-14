@@ -17,8 +17,8 @@ export const members: Member[] = [
     category: 'Faculty',
     researchArea: 'Systems Engineering & Data Science',
     email: 'raghur@dsai.iitm.ac.in',
-    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwXT69G2x3Eu25tTFj48uEeF9qLkWqKUKXvA&s',
-    profileLink: 'https://che.iitm.ac.in/content/raghunathan-rengaswamy'
+    imageUrl: 'https://che.iitm.ac.in/wp-content/uploads/2018/06/Raghunathan-Rengaswamy.jpg',
+    profileLink: '/director'
   },
   // {
   //   id: 'm2',
@@ -189,5 +189,115 @@ export const members: Member[] = [
     email: 'bt18d301@smail.iitm.ac.in',
     imageUrl: '',
     profileLink: '#'
-  }
+  },
+  {
+    id: 'cv_curr_1',
+    name: 'Sundarabharathi',
+    position: 'PhD Scholar',
+    category: 'Our Team',
+    researchArea: 'Machine learning techniques for optimization',
+    email: '',
+    imageUrl: '',
+    profileLink: '#'
+  },
+  {
+    id: 'cv_curr_2',
+    name: 'Ramesh',
+    position: 'PhD Scholar',
+    category: 'Our Team',
+    researchArea: 'Identification of Optimal Capacities of Renewable Energy Demand',
+    email: '',
+    imageUrl: '',
+    profileLink: '#'
+  },
+  {
+    id: 'cv_curr_3',
+    name: 'Subhiksha',
+    position: 'PhD Scholar',
+    category: 'Our Team',
+    researchArea: 'Data Science for Healthcare',
+    email: '',
+    imageUrl: '',
+    profileLink: '#'
+  },
+  {
+    id: 'cv_alum_1',
+    name: 'Mukesh K',
+    position: 'PhD Scholar',
+    category: 'Alumni',
+    researchArea: 'Machine Learning Applications in Fluid Dynamics',
+    email: '',
+    imageUrl: '',
+    profileLink: '#'
+  },
+  {
+    id: 'cv_alum_2',
+    name: 'R. Srijith',
+    position: 'PhD Scholar',
+    category: 'Alumni',
+    researchArea: 'Spinning disk atomizer for particle synthesis',
+    email: '',
+    imageUrl: '',
+    profileLink: '#'
+  },
+  {
+    id: 'cv_alum_3',
+    name: 'S. Manikandan',
+    position: 'PhD Scholar',
+    category: 'Alumni',
+    researchArea: 'Multivariable control',
+    email: '',
+    imageUrl: '',
+    profileLink: '#'
+  },
+  {
+    id: 'cv_alum_4',
+    name: 'Faiz Mohammad',
+    position: 'PhD Scholar',
+    category: 'Alumni',
+    researchArea: 'Droplet microfluidics for energy applications',
+    email: '',
+    imageUrl: '',
+    profileLink: '#'
+  },
+  {
+    id: 'cv_alum_5',
+    name: 'S. R. Suseendiran',
+    position: 'PhD Scholar',
+    category: 'Alumni',
+    researchArea: 'Development of novel flow battery chemistries',
+    email: '',
+    imageUrl: '',
+    profileLink: '#'
+  },
+  {
+    id: 'cv_alum_6',
+    name: 'Mohd Faheem Ullah',
+    position: 'PhD Scholar',
+    category: 'Alumni',
+    researchArea: 'Controller performance assessment techniques',
+    email: '',
+    imageUrl: '',
+    profileLink: '#'
+  },
+  {
+    id: 'cv_alum_7',
+    name: 'C. Sivadurgaprasad',
+    position: 'PhD Scholar',
+    category: 'Alumni',
+    researchArea: 'Computational discovery of electrolytes',
+    email: '',
+    imageUrl: '',
+    profileLink: '#'
+  },
+  {
+    id: 'cv_alum_8',
+    name: 'Deepa Elizabeth',
+    position: 'PhD Scholar',
+    category: 'Alumni',
+    researchArea: 'Modeling, Optimization and Control of Flow Batteries',
+    email: '',
+    imageUrl: '',
+    profileLink: '#'
+  },
 ];
