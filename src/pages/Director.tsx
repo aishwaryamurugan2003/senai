@@ -1,9 +1,9 @@
 import React from 'react';
 import { Mail, GraduationCap, Award, BookOpen, User, Building, MapPin, Mic, FileText, Briefcase, Activity } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import './Director.css';
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -11,12 +11,12 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
   show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
 };
 
-const headerVariants = {
+const headerVariants: Variants = {
   hidden: { opacity: 0, scale: 0.95, y: 30 },
   show: { opacity: 1, scale: 1, y: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } }
 };
@@ -25,20 +25,20 @@ const Director = () => {
   return (
     <div className="director-page" style={{ paddingTop: '160px', paddingBottom: '80px' }}>
       <div className="container">
-        
-        <motion.div 
+
+        <motion.div
           className="director-profile-header"
           variants={headerVariants}
           initial="hidden"
           animate="show"
         >
-          <motion.img 
+          <motion.img
             initial={{ rotate: -10, scale: 0.8, opacity: 0 }}
             animate={{ rotate: 0, scale: 1, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
-            src="https://che.iitm.ac.in/wp-content/uploads/2018/06/Raghunathan-Rengaswamy.jpg" 
-            alt="Prof. Raghunathan Rengaswamy" 
-            className="director-image" 
+            src="https://che.iitm.ac.in/wp-content/uploads/2018/06/Raghunathan-Rengaswamy.jpg"
+            alt="Prof. Raghunathan Rengaswamy"
+            className="director-image"
           />
           <div className="director-info">
             <h1 className="director-name">Raghunathan Rengaswamy</h1>
@@ -46,14 +46,14 @@ const Director = () => {
             <p className="director-position">Head, Walmart Center for Tech Excellence</p>
             <p className="director-dept">Department of Data Science and Artificial Intelligence & Department of Chemical Engineering</p>
             <p className="director-inst">IIT Madras, India</p>
-            
+
             <div className="director-contact">
               <a href="mailto:raghur@iitm.ac.in" className="contact-link"><Mail size={18} /> raghur@iitm.ac.in</a>
             </div>
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="director-content"
           variants={containerVariants}
           initial="hidden"
@@ -197,7 +197,7 @@ const Director = () => {
               </ul>
             </div>
           </motion.div>
-          
+
           <motion.div className="content-section" variants={itemVariants}>
             <h2 className="section-title"><BookOpen size={24} /> Books & Book Chapters</h2>
             <ul className="bullet-list">
